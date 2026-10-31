@@ -21,6 +21,7 @@ empty fields get offered for population as work reveals the answers.
 - **Default aspect ratio:** (e.g. 9:16)
 - **Default resolution / fps:**
 - **Default video length target:** (e.g. 30–60s)
+- **Default reference style:** (absolute path to a STYLE-GUIDE.md from reel-style-clone; used when a request names no reference)
 
 ## Caption preferences
 

@@ -59,6 +59,13 @@ ffmpeg -i ref.mp4 \
   fires on every caption pop (over-detection), raise toward `0.35`; if it
   misses cuts between two similar shots of the same person, drop toward
   `0.15` and eyeball the extra frames.
+- **Zero cuts found on a motion-graphics reel is not "one shot".** Kinetic-type styles
+  change scene with multi-frame whips/morphs that never cross 0.25 in a single frame.
+  Dump the per-frame curve instead:
+  `ffmpeg -i ref.mp4 -vf "scale=320:-2,select='gte(scene,0)',metadata=print:key=lavfi.scene_score:file=evidence/scene_scores.txt" -f null -`
+  A lone spike near 1.0 is a hard cut. A ramp of 0.1–0.4 over 4–8 frames is an
+  animated transition. Count both, and tile a 30 fps strip across each ramp to see
+  what the transition actually is.
 - `-vsync vfr` matters — without it ffmpeg duplicates frames to fill the
   timeline and the PNG numbering no longer maps 1:1 to cuts.
 

@@ -580,3 +580,15 @@ five skill validations. Rechecked whitespace and public-repository hygiene befor
 committing. Media, credentials, local review storage and personal configuration
 remain ignored. No architecture or implementation changes were needed for this
 publication step.
+
+## 2026-10-31 — Style clone: kinetic-type reel → default reference style
+
+Ran reel-style-clone on a screen-recorded TikTok (18 s, VO-only, no face on camera).
+Findings: one hard cut, 7 whip/morph scenes, ~1.8 builds/s; headline-not-subtitle type
+system (lead-in / heavy-italic payoff / tag pill); no music or SFX detected. Wrote a
+brand-adapted STYLE-GUIDE.md in the projects dir and set it as the default reference
+style in MASTER_CONTEXT.md. Skill touched: video-edit-pipeline (Stage 1 now falls back
+to MASTER_CONTEXT's Default reference style); template gained the field.
+Lessons: on motion-graphics-only reels the 0.25 scene threshold finds ~0 cuts because
+transitions are multi-frame whips; read the per-frame scene_score curve (ramps = animated
+transitions, single 1.0 spike = hard cut) instead.

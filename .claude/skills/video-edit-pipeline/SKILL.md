@@ -113,7 +113,9 @@ caption treatment, card style, color, sound character) plus concrete build
 directives.
 
 - The style guide is the contract for Stage 2. The storyboard must cite it.
-- If no reference exists, skip to Stage 2 and use the house defaults from
+- If no reference is given but `MASTER_CONTEXT.md` § Defaults names a **Default
+  reference style**, use that STYLE-GUIDE.md as the contract and skip the clone.
+- If neither exists, skip to Stage 2 and use the house defaults from
   `MASTER_CONTEXT.md` plus branded-ad-edit's own framing grammar.
 
 ## Stage 2 — The build (branded-ad-edit)
